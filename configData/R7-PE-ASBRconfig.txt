@@ -1,0 +1,1540 @@
+# TiMOS-C-21.10.R2 cpm/x86_64 Nokia 7750 SR Copyright (c) 2000-2021 Nokia.
+# All rights reserved. All use subject to applicable license agreements.
+# Built on Wed Dec 15 14:15:11 PST 2021 by builder in /builds/c/2110B/R2/panos/main/sros
+# Configuration format version 21.10 revision 0
+
+# Generated THU MAY 04 08:29:11 2023 UTC
+
+exit all
+configure
+#--------------------------------------------------
+echo "System Configuration"
+#--------------------------------------------------
+    system
+        name "R7-PE-ASBR"
+        management-interface
+            yang-modules
+                no nokia-combined-modules
+                nokia-submodules
+            exit
+        exit
+        netconf
+            no shutdown
+        exit
+        snmp
+            streaming
+                no shutdown
+            exit
+            packet-size 9216
+        exit
+        time
+            ntp
+                no shutdown
+            exit
+            sntp
+                shutdown
+            exit
+            zone UTC
+        exit
+    exit
+#--------------------------------------------------
+echo "System Security Configuration"
+#--------------------------------------------------
+    system
+        security
+            telnet-server
+            ftp-server
+            profile "default"
+                netconf
+                    base-op-authorization
+                        action
+                        cancel-commit
+                        close-session
+                        commit
+                        copy-config
+                        create-subscription
+                        delete-config
+                        discard-changes
+                        edit-config
+                        get
+                        get-config
+                        get-data
+                        get-schema
+                        validate
+                    exit
+                exit
+                entry 10
+                    match "exec"
+                    action permit
+                exit
+                entry 20
+                    match "exit"
+                    action permit
+                exit
+                entry 30
+                    match "help"
+                    action permit
+                exit
+                entry 40
+                    match "logout"
+                    action permit
+                exit
+                entry 50
+                    match "password"
+                    action permit
+                exit
+                entry 60
+                    match "show config"
+                    action deny
+                exit
+                entry 65
+                    match "show li"
+                    action deny
+                exit
+                entry 66
+                    match "clear li"
+                    action deny
+                exit
+                entry 67
+                    match "tools dump li"
+                    action deny
+                exit
+                entry 68
+                    match "state li"
+                    action deny
+                exit
+                entry 70
+                    match "show"
+                    action permit
+                exit
+                entry 75
+                    match "state"
+                    action permit
+                exit
+                entry 80
+                    match "enable-admin"
+                    action permit
+                exit
+                entry 90
+                    match "enable"
+                    action permit
+                exit
+                entry 100
+                    match "configure li"
+                    action deny
+                exit
+            exit
+            profile "CISCO-OPERATOR"
+                default-action deny-all
+                entry 1
+                    match "configure service"
+                    action permit
+                exit
+                entry 2
+                    match "info"
+                    action permit
+                exit
+                entry 3
+                    match "show service"
+                    action permit
+                exit
+                entry 6
+                    match "configure port"
+                    action permit
+                exit
+            exit
+            profile "administrative"
+                netconf
+                    base-op-authorization
+                        action
+                        cancel-commit
+                        close-session
+                        commit
+                        copy-config
+                        create-subscription
+                        delete-config
+                        discard-changes
+                        edit-config
+                        get
+                        get-config
+                        get-data
+                        get-schema
+                        kill-session
+                        lock
+                        validate
+                    exit
+                exit
+                entry 10
+                    match "configure system security"
+                    action permit
+                exit
+                entry 20
+                    match "show system security"
+                    action permit
+                exit
+                entry 30
+                    match "tools perform security"
+                    action permit
+                exit
+                entry 40
+                    match "tools dump security"
+                    action permit
+                exit
+                entry 50
+                    match "admin system security"
+                    action permit
+                exit
+                entry 100
+                    match "configure li"
+                    action deny
+                exit
+                entry 110
+                    match "show li"
+                    action deny
+                exit
+                entry 111
+                    match "clear li"
+                    action deny
+                exit
+                entry 112
+                    match "tools dump li"
+                    action deny
+                exit
+            exit
+            user "admin"
+                password "$2y$10$1ehq.qwqoUjet0/HmUitA.l1x2V4udpQvS72LGaZVTKV.cKotuKgS"
+                access console ftp snmp netconf grpc
+                console
+                    member "administrative"
+                exit
+            exit
+            user "asad"
+                password "$2y$10$phkuPZOi6QeR7j5tFS8P2.Chy8YwTJgqKdSz/MRofow8smSiBL1Ku"
+                access console ftp snmp netconf grpc
+                console
+                    member "default"
+                    member "administrative"
+                exit
+            exit
+            user "cisco-operator"
+                password "$2y$10$r4gS05mKzSCsHSz6FXmMc.622t2lvwnqAhqe071227zsaPqcZrz9y"
+                access console snmp
+                console
+                    member "default"
+                    member "CISCO-OPERATOR"
+                exit
+            exit
+            snmp
+                community "cV3ISTw2V5pbEWmVEA9jXgB/1EERXQA=" hash2 rwa version both
+                community "76HzdddhlPpRo1Vql+ZB5spLqccgYQ==" hash2 rwa version both
+            exit
+            ssh
+                preserve-key
+            exit
+            per-peer-queuing
+            cpu-protection
+                policy 254 create
+                exit
+                policy 255 create
+                exit
+            exit
+            dist-cpu-protection
+                policy "_default-port-policy" type port create
+                exit
+                policy "_default-access-policy" create
+                exit
+                policy "_default-network-policy" create
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "Log Configuration"
+#--------------------------------------------------
+    log
+        filter 1500 name "1500"
+            default-action forward
+            description "Netconf config/create/cli log filter"
+            entry 1 name "1"
+                action drop
+                description "To drop system tmnxConfigModify"
+                match
+                    application eq "system"
+                    number eq 2006
+                exit
+            exit
+            entry 2 name "2"
+                action drop
+                description "To drop system tmnxConfigCreate"
+                match
+                    application eq "system"
+                    number eq 2007
+                exit
+            exit
+            entry 3 name "3"
+                action drop
+                description "To drop system tmnxStateChange"
+                match
+                    application eq "system"
+                    number eq 2009
+                exit
+            exit
+            entry 4 name "4"
+                action drop
+                description "To drop security cli_user_login"
+                match
+                    application eq "security"
+                    number eq 2001
+                exit
+            exit
+            entry 5 name "5"
+                action drop
+                description "To drop security cli_user_logout"
+                match
+                    application eq "security"
+                    number eq 2002
+                exit
+            exit
+            entry 6 name "6"
+                action drop
+                description "To drop user netconf_user_login"
+                match
+                    application eq "user"
+                    number eq 2018
+                exit
+            exit
+            entry 7 name "7"
+                action drop
+                description "To drop user netconf_user_logout"
+                match
+                    application eq "user"
+                    number eq 2019
+                exit
+            exit
+            entry 8 name "8"
+                action drop
+                description "To drop security netconf_user_login"
+                match
+                    application eq "security"
+                    number eq 2121
+                exit
+            exit
+            entry 9 name "9"
+                action drop
+                description "To drop security netconf_user_logout"
+                match
+                    application eq "security"
+                    number eq 2122
+                exit
+            exit
+            entry 10 name "10"
+                action drop
+                description "To drop system ssiSaveConfigSucceeded"
+                match
+                    application eq "system"
+                    number eq 2002
+                exit
+            exit
+            entry 11 name "11"
+                action drop
+                description "To drop user cli_config_io"
+                match
+                    application eq "user"
+                    number eq 2011
+                exit
+            exit
+            entry 12 name "19"
+                action drop
+                description "To drop user grpc_user_login notification"
+                match
+                    application eq "user"
+                    number eq 2014
+                exit
+            exit
+            entry 13 name "20"
+                action drop
+                description "To drop user grpc_user_logout notification"
+                match
+                    application eq "user"
+                    number eq 2015
+                exit
+            exit
+            entry 14 name "21"
+                action drop
+                description "To drop security grpc_user_login notification"
+                match
+                    application eq "security"
+                    number eq 2117
+                exit
+            exit
+            entry 15 name "22"
+                action drop
+                description "To drop security grpc_user_logout notification"
+                match
+                    application eq "security"
+                    number eq 2118
+                exit
+            exit
+            entry 16 name "34"
+                action drop
+                description "To drop ISIS tmnxIsisCircMtuTooLow notification"
+                match
+                    application eq "isis"
+                    number eq 2064
+                exit
+            exit
+            entry 17 name "35"
+                action drop
+                description "To drop PTP tmnxPtpMasterClockChangedEvent notification"
+                match
+                    application eq "ptp"
+                    number eq 2003
+                exit
+            exit
+        exit
+        event-control "igmp" 2005 suppress
+        event-control "video" 2009 suppress
+        event-control "video" 2010 suppress
+        event-control "vrtr" 2034 generate
+        snmp-trap-group 97 name "97"
+        exit
+        snmp-trap-group 98 name "98"
+            description "5620sam"
+            trap-target "5254000E2B1C:main1" address 139.178.72.123 snmpv2c notify-community "privatetrap98"
+            trap-target "52540017BD46:main1" address 147.75.202.27 snmpv2c notify-community "privatetrap98"
+            trap-target "5254003F2510:main1" address 147.75.102.179 snmpv2c notify-community "privatetrap98"
+        exit
+        log-id 96 name "96"
+            description "Log to filter out unwanted Netconf logs"
+            filter 1500
+            from main security
+            to netconf 500
+            netconf-stream "nsp-netconf-stream"
+            no shutdown
+        exit
+        log-id 97 name "97"
+            from main
+            to snmp 1024
+            no shutdown
+        exit
+        log-id 98 name "98"
+            from main security change
+            to snmp 1024
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "System Security Cpm Hw Filters, PKI, TLS and LDAP Configuration"
+#--------------------------------------------------
+    system
+        security
+            tls
+                cert-profile "grpc_cert_profile" create
+                    entry 1 create
+                        cert "192_168_100_37_cert_l1.crt"
+                        key "192_168_100_37_servkey_l1.crt"
+                    exit
+                    no shutdown
+                exit
+                server-cipher-list "grpc_cipher_list" create
+                    cipher 4 name tls-rsa-with3des-ede-cbc-sha
+                    cipher 5 name tls-rsa-with-aes128-cbc-sha
+                    cipher 6 name tls-rsa-with-aes256-cbc-sha
+                    cipher 7 name tls-rsa-with-aes128-cbc-sha256
+                    cipher 8 name tls-rsa-with-aes256-cbc-sha256
+                exit
+                server-tls-profile "grpc_tls_profile" create
+                    cert-profile "grpc_cert_profile"
+                    cipher-list "grpc_cipher_list"
+                    no shutdown
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "System gRPC Configuration"
+#--------------------------------------------------
+    system
+        grpc
+            allow-unsecure-connection
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "QoS Policy Configuration"
+#--------------------------------------------------
+    qos
+        scheduler-policy "ENTERPRISE-SCHEDULER" create
+            tier 3
+                scheduler "ENTERPRISE-TIER-3-SCHEDULER" create
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "Switch Fabric Configuration"
+#--------------------------------------------------
+    sfm 1
+        sfm-type m-sfm5-12
+        no shutdown
+    exit
+#--------------------------------------------------
+echo "Card Configuration"
+#--------------------------------------------------
+    card 1
+        card-type iom3-xp-c
+        mda 1
+            mda-type m20-1gb-xp-sfp
+            no shutdown
+        exit
+        no shutdown
+    exit
+#--------------------------------------------------
+echo "Port Configuration"
+#--------------------------------------------------
+    port 1/1/1
+        description ":hc=10.7.10.1/29:"
+        ethernet
+            speed 10
+            mode hybrid
+            encap-type dot1q
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+        no shutdown
+    exit
+    port 1/1/2
+        description ":hc=10.4.7.2/29:"
+        ethernet
+            speed 10
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+        no shutdown
+    exit
+    port 1/1/3
+        description ":hc=10.3.7.1/29:"
+        ethernet
+            speed 10
+            mode hybrid
+            encap-type dot1q
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+        no shutdown
+    exit
+    port 1/1/4
+        description ":hc=10.7.48.2/29:"
+        ethernet
+            speed 10
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+        no shutdown
+    exit
+    port 1/1/5
+        shutdown
+        ethernet
+            speed 10
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+    exit
+    port 1/1/6
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/7
+        ethernet
+            speed 10
+            mode access
+            encap-type dot1q
+        exit
+        no shutdown
+    exit
+    port 1/1/8
+        ethernet
+            speed 10
+            mode access
+        exit
+        no shutdown
+    exit
+    port 1/1/9
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/10
+        ethernet
+            speed 10
+            mode access
+            encap-type dot1q
+            lldp
+                dest-mac nearest-bridge
+                    admin-status tx-rx
+                    notification
+                exit
+            exit
+        exit
+        no shutdown
+    exit
+    port 1/1/11
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/12
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/13
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/14
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/15
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/16
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/17
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/18
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/19
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port 1/1/20
+        shutdown
+        ethernet
+            speed 10
+        exit
+    exit
+    port A/3
+        shutdown
+        ethernet
+        exit
+    exit
+    port A/4
+        shutdown
+    exit
+    port B/3
+        shutdown
+        ethernet
+        exit
+    exit
+    port B/4
+        shutdown
+    exit
+#--------------------------------------------------
+echo "System Sync-If-Timing Configuration"
+#--------------------------------------------------
+    system
+        sync-if-timing
+            begin
+            commit
+        exit
+    exit
+#--------------------------------------------------
+echo "QoS Policy Configuration"
+#--------------------------------------------------
+    qos
+        sap-ingress 100 name "100" create
+            description "decription"
+            queue 1 create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 1
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 2 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 2
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 3 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 3
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 4 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 4
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 5 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 5
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 7 expedite create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" level 7 cir-level 7
+                adaptation-rule pir min cir min
+                rate 1
+            exit
+            queue 8 expedite create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" level 8 cir-level 8
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 11 multipoint create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 2
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            fc "af" create
+                queue 3
+            exit
+            fc "be" create
+                queue 1
+            exit
+            fc "ef" create
+                queue 7
+            exit
+            fc "h2" create
+                queue 5
+            exit
+            fc "l1" create
+                queue 4
+            exit
+            fc "l2" create
+                queue 2
+                multicast-queue 11
+            exit
+            fc "nc" create
+                queue 8
+            exit
+            dscp af21 af22 af23 fc "af"
+            dscp be fc "be"
+            dscp ef cs5 fc "ef" priority high
+            dscp af41 af42 af43 fc "h2"
+            dscp af31 af32 af33 fc "l1"
+            dscp cs1 cs3 af11 af12 af13 fc "l2"
+            dscp nc1 fc "nc" priority high
+        exit
+        sap-egress 100 name "100" create
+            description "decription"
+            queue 1 create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 1
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 2 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 2
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 3 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 3
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 4 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 4
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 5 best-effort create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" cir-level 5
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 7 expedite create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" level 7 cir-level 7
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            queue 8 expedite create
+                parent "ENTERPRISE-TIER-3-SCHEDULER" level 8 cir-level 8
+                adaptation-rule pir min cir min
+                rate max cir max
+            exit
+            fc af create
+                queue 3
+                dot1p 3
+            exit
+            fc be create
+                queue 1
+            exit
+            fc ef create
+                queue 7
+                dot1p 5
+            exit
+            fc h2 create
+                queue 5
+                dot1p 3
+            exit
+            fc l1 create
+                queue 4
+                dot1p 3
+            exit
+            fc l2 create
+                queue 2
+            exit
+            fc nc create
+                queue 8
+                dot1p 6
+            exit
+            dscp af21 af22 af23 fc "af"
+            dscp be fc "be"
+            dscp af41 af42 af43 fc "h2"
+            dscp af31 af32 af33 fc "l1"
+            dscp cs1 cs3 af11 af12 af13 fc "l2"
+        exit
+    exit
+#--------------------------------------------------
+echo "Open-Flow Configuration"
+#--------------------------------------------------
+    open-flow
+        of-switch "OFS1" ofs-id 1
+        exit
+    exit
+#--------------------------------------------------
+echo "Management Router Configuration"
+#--------------------------------------------------
+    router management
+    exit
+
+#--------------------------------------------------
+echo "Router (Network Side) Configuration"
+#--------------------------------------------------
+    router Base
+        admin-tags
+            admin-tag "2740"
+            admin-tag "2840"
+            route-admin-tag-policy "INCLUDE-2740"
+                include "2740"
+            exit
+            route-admin-tag-policy "INCLUDE-2840"
+                include "2840"
+            exit
+        exit
+        interface "LOOPBACK-ANYCAST"
+            address 10.67.67.1/32
+            loopback
+            no shutdown
+        exit
+        interface "system"
+            address 10.10.10.7/32
+            no shutdown
+        exit
+        interface "toR10"
+            address 10.7.10.1/29
+            port 1/1/1:0
+            no shutdown
+        exit
+        interface "toR3"
+            address 10.3.7.1/29
+            port 1/1/3:0
+            no shutdown
+        exit
+        interface "toR4"
+            address 10.4.7.2/29
+            port 1/1/2
+            no shutdown
+        exit
+        interface "toSROS"
+            address 10.7.48.2/29
+            port 1/1/4
+            bfd 100 receive 100 multiplier 3 type cpm-np
+            no shutdown
+        exit
+        autonomous-system 65000
+        ecmp 16
+        router-id 10.10.10.7
+#--------------------------------------------------
+echo "MPLS Label Range Configuration"
+#--------------------------------------------------
+        mpls-labels
+            sr-labels start 20001 end 20900
+        exit
+#--------------------------------------------------
+echo "OSPFv2 Configuration"
+#--------------------------------------------------
+        ospf 0
+            shutdown
+        exit
+#--------------------------------------------------
+echo "ISIS Configuration"
+#--------------------------------------------------
+        isis 0
+            router-id 10.10.10.7
+            level-capability level-2
+            area-id 49.0001.1111
+            database-export identifier 0 bgp-ls-identifier 1
+            traffic-engineering
+            reference-bandwidth 100000000
+            advertise-router-capability area
+            loopfree-alternates
+                remote-lfa
+                exit
+            exit
+            level 1
+                wide-metrics-only
+            exit
+            level 2
+                wide-metrics-only
+            exit
+            segment-routing
+                prefix-sid-range global
+                no shutdown
+            exit
+            interface "system"
+                interface-type point-to-point
+                ipv4-node-sid index 37
+                no shutdown
+            exit
+            interface "LOOPBACK-ANYCAST"
+                ipv4-node-sid index 167 clear-n-flag
+                passive
+                no shutdown
+            exit
+            interface "toR3"
+                interface-type point-to-point
+                no shutdown
+            exit
+            interface "toR4"
+                interface-type point-to-point
+                no shutdown
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "Pcep Configuration"
+#--------------------------------------------------
+        pcep
+            pcc
+                peer 192.168.100.41
+                    no shutdown
+                exit
+                no shutdown
+            exit
+        exit
+#--------------------------------------------------
+echo "MPLS Configuration"
+#--------------------------------------------------
+        mpls
+            sr-te-resignal
+                resignal-on-igp-event
+            exit
+            mpls-tp
+            exit
+            interface "system"
+                no shutdown
+            exit
+            interface "toR10"
+                no shutdown
+            exit
+            interface "toR3"
+                no shutdown
+            exit
+            interface "toR4"
+                no shutdown
+            exit
+            mpls-tp
+                no shutdown
+            exit
+        exit
+#--------------------------------------------------
+echo "RSVP Configuration"
+#--------------------------------------------------
+        rsvp
+            refresh-time 300
+            rapid-retransmit-time 100
+            refresh-reduction-over-bypass enable
+            interface "system"
+                no shutdown
+            exit
+            interface "toR10"
+                refresh-reduction
+                    reliable-delivery
+                exit
+                no shutdown
+            exit
+            interface "toR3"
+                refresh-reduction
+                    reliable-delivery
+                exit
+                no shutdown
+            exit
+            interface "toR4"
+                refresh-reduction
+                    reliable-delivery
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "MPLS LSP Configuration"
+#--------------------------------------------------
+        mpls
+            path "LOOSE"
+                no shutdown
+            exit
+            path "PCE-PLACEHOLDER"
+                no shutdown
+            exit
+            lsp-template "PCE-INIT" pce-init-p2p-srte template-id default
+                default-path "PCE-PLACEHOLDER"
+                max-sr-labels 5 additional-frr-labels 2
+                pce-report enable
+                no shutdown
+            exit
+            lsp "pccRsvp-from-10.10.10.7-to-10.10.10.1"
+                to 10.10.10.1
+                from 10.10.10.7
+                egress-statistics
+                    collect-stats
+                    no shutdown
+                exit
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccRsvp-from-10.10.10.7-to-10.10.10.6"
+                shutdown
+                to 10.10.10.6
+                from 10.10.10.7
+                egress-statistics
+                    shutdown
+                exit
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+            exit
+            lsp "pccRsvp-from-10.10.10.7-to-10.10.10.5"
+                to 10.10.10.5
+                from 10.10.10.7
+                egress-statistics
+                    shutdown
+                exit
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.1" sr-te
+                to 10.10.10.1
+                from 10.10.10.7
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.6-adminTag-2740" sr-te
+                to 10.10.10.6
+                from 10.10.10.7
+                admin-tag "2740"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.6" sr-te
+                to 10.10.10.6
+                from 10.10.10.7
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.5-adminTag-2740" sr-te
+                to 10.10.10.5
+                from 10.10.10.7
+                admin-tag "2740"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.1-adminTag-2740" sr-te
+                to 10.10.10.1
+                from 10.10.10.7
+                admin-tag "2740"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.6-adminTag-2840" sr-te
+                to 10.10.10.6
+                from 10.10.10.7
+                admin-tag "2840"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.5-adminTag-2840" sr-te
+                to 10.10.10.5
+                from 10.10.10.7
+                admin-tag "2840"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.1-adminTag-2840" sr-te
+                to 10.10.10.1
+                from 10.10.10.7
+                admin-tag "2840"
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            lsp "pccSrte-from-10.10.10.7-to-10.10.10.2" sr-te
+                to 10.10.10.2
+                from 10.10.10.7
+                path-computation-method pce
+                pce-report enable
+                pce-control
+                primary "LOOSE"
+                exit
+                no shutdown
+            exit
+            pce-initiated-lsp
+                sr-te
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "LDP Configuration"
+#--------------------------------------------------
+        ldp
+            import-pmsi-routes
+            exit
+            tcp-session-parameters
+            exit
+            interface-parameters
+                ipv4
+                    hello 180 3
+                    keepalive 90 3
+                exit
+                interface "toR3" dual-stack
+                    ipv4
+                        no shutdown
+                    exit
+                    no shutdown
+                exit
+                interface "toR4" dual-stack
+                    ipv4
+                        no shutdown
+                    exit
+                    no shutdown
+                exit
+            exit
+            targeted-session
+            exit
+            no shutdown
+        exit
+    exit
+
+#--------------------------------------------------
+echo "Service Configuration"
+#--------------------------------------------------
+    service
+        sdp 10702 mpls create
+            far-end 10.10.10.2
+            sr-te-lsp "pccSrte-from-10.10.10.7-to-10.10.10.2"
+            keep-alive
+                shutdown
+            exit
+            no shutdown
+        exit
+        sdp 10706 mpls create
+            far-end 10.10.10.6
+            sr-te-lsp "pccSrte-from-10.10.10.7-to-10.10.10.6"
+            keep-alive
+                shutdown
+            exit
+            no shutdown
+        exit
+        customer 1 name "1" create
+            description "Default customer"
+        exit
+        vprn 4 name "L3VPN02-single-instance-2210-7" customer 1 create
+            interface "int_2210_1" create
+            exit
+        exit
+        vprn 9 name "L3VPN01-single-instance-2110-7" customer 1 create
+            interface "int_2110_1" create
+            exit
+        exit
+        vprn 10 name "L3VPN-Single-Instance-3009-R7" customer 1 create
+            interface "int_3009_1" create
+            exit
+        exit
+        vprn 11 name "L3VPN02-multi-instance-InterAS-B-2240-7" customer 1 create
+            interface "int_2240_1" create
+            exit
+        exit
+        vprn 12 name "L3VPN01-multi-instance-InterAS-B-2140-7" customer 1 create
+            interface "int_2140_1" create
+            exit
+        exit
+        vprn 13 name "L3VPN-Single-Instance-1020-R7" customer 1 create
+            interface "int_1020_1" create
+            exit
+        exit
+        vprn 15 name "L3VPN02-multi-instance-2220-7" customer 1 create
+            interface "int_2220_1" create
+            exit
+        exit
+        vprn 20 name "L3VPN04-single-instance-2411-7" customer 1 create
+            interface "int_2411_1" create
+            exit
+        exit
+        vprn 22 name "L3VPN04-multi-instance-2421-7" customer 1 create
+            interface "int_2421_1" create
+            exit
+        exit
+        vprn 24 name "L3VPN04-multi-instance-InterAS-A-2431-7" customer 1 create
+            interface "int_2431_1" create
+            exit
+        exit
+        vprn 39 name "testing_1" customer 1 create
+        exit
+        vprn 41 name "L3VPN05-single-instance-2710-7" customer 1 create
+            interface "int_2710_1" create
+            exit
+        exit
+        vprn 4020 name "L3VPN-NonAutoBind-single-instance-4020" customer 1 create
+            interface "int_4020_1" create
+            exit
+        exit
+        vprn 4 name "L3VPN02-single-instance-2210-7" customer 1 create
+            description "L3VPN02-single-instance-2210"
+            router-id 10.10.10.7
+            interface "int_2210_1" create
+                description "L3VPN02-single-instance-2210"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2210 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2210
+                    vrf-import "L3VPN02-single-instance-2211-IMPORT"
+                    vrf-export "L3VPN02-single-instance-2210-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 9 name "L3VPN01-single-instance-2110-7" customer 1 create
+            description "L3VPN01-single-instance-2110"
+            router-id 10.10.10.7
+            interface "int_2110_1" create
+                description "L3VPN01-single-instance-2110"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2110 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2110
+                    vrf-import "L3VPN01-single-instance-2110-IMPORT"
+                    vrf-export "L3VPN01-single-instance-2110-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 10 name "L3VPN-Single-Instance-3009-R7" customer 1 create
+            description "L3VPN-Single-Instance-3009"
+            router-id 10.10.10.7
+            interface "int_3009_1" create
+                address 7.7.7.7/24
+                sap 1/1/10:3009 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:3009
+                    vrf-import "L3VPN-Single-Instance-3009-Import"
+                    vrf-export "L3VPN-Single-Instance-3009-Export"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 11 name "L3VPN02-multi-instance-InterAS-B-2240-7" customer 1 create
+            description "L3VPN02-multi-instance-InterAS-B-2240"
+            router-id 10.10.10.7
+            interface "int_2240_1" create
+                description "L3VPN02-multi-instance-InterAS-B-2240"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2240 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 45000:2240
+                    vrf-import "L3VPN02-multi-instance-InterAS-B-2241-IMPORT"
+                    vrf-export "L3VPN02-multi-instance-InterAS-B-2240-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 12 name "L3VPN01-multi-instance-InterAS-B-2140-7" customer 1 create
+            description "L3VPN01-multi-instance-InterAS-B-2140"
+            router-id 10.10.10.7
+            interface "int_2140_1" create
+                description "L3VPN01-multi-instance-InterAS-B-2140"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2140 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 45000:2140
+                    vrf-import "L3VPN01-multi-instance-InterAS-B-2140-IMPORT"
+                    vrf-export "L3VPN01-multi-instance-InterAS-B-2140-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 13 name "L3VPN-Single-Instance-1020-R7" customer 1 create
+            description "L3VPN-Single-Instance-1020"
+            router-id 10.10.10.7
+            interface "int_1020_1" create
+                address 7.7.7.7/24
+                sap 1/1/10:1020 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:1020
+                    vrf-import "L3VPN-Single-Instance-1020-Import"
+                    vrf-export "L3VPN-Single-Instance-1020-Export"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 15 name "L3VPN02-multi-instance-2220-7" customer 1 create
+            description "L3VPN02-multi-instance-2220"
+            router-id 10.10.10.7
+            interface "int_2220_1" create
+                description "L3VPN02-multi-instance-2220"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2220 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2220
+                    vrf-import "L3VPN02-multi-instance-2221-IMPORT"
+                    vrf-export "L3VPN02-multi-instance-2220-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 20 name "L3VPN04-single-instance-2411-7" customer 1 create
+            description "L3VPN04-single-instance-2411"
+            router-id 10.10.10.7
+            interface "int_2411_1" create
+                description "L3VPN04-single-instance-2411"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2411 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2411
+                    vrf-import "L3VPN04-single-instance-2411-IMPORT"
+                    vrf-export "L3VPN04-single-instance-2411-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 22 name "L3VPN04-multi-instance-2421-7" customer 1 create
+            description "L3VPN04-multi-instance-2421"
+            router-id 10.10.10.7
+            interface "int_2421_1" create
+                description "L3VPN04-multi-instance-2421"
+                address 7.7.7.7/24
+                ip-mtu 1492
+                sap 1/1/10:2421 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2421
+                    vrf-import "L3VPN04-multi-instance-2421-IMPORT"
+                    vrf-export "L3VPN04-multi-instance-2421-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 24 name "L3VPN04-multi-instance-InterAS-A-2431-7" customer 1 create
+            description "L3VPN04-multi-instance-InterAS-A-2431"
+            router-id 10.10.10.7
+            autonomous-system 65000
+            interface "int_2431_1" create
+                description "L3VPN04-multi-instance-InterAS-A-2431"
+                address 10.7.10.1/30
+                ip-mtu 1492
+                sap 1/1/10:2431 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2431
+                    vrf-import "L3VPN04-multi-instance-InterAS-A-2431-IMPORT"
+                    vrf-export "L3VPN04-multi-instance-InterAS-A-2431-EXPORT"
+                    no shutdown
+                exit
+            exit
+            bgp
+                group "int_2431_1-01"
+                    peer-as 55000
+             

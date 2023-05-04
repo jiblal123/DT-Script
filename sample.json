@@ -1,0 +1,3122 @@
+{
+    "@": {
+        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element",
+        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+        "nsp-model:sources": [
+            "fdn:realm:sam:network:10.10.10.2"
+        ]
+    },
+    "latitude": 0.0,
+    "availability-state": [],
+    "description": null,
+    "admin-state": "unlocked",
+    "type": "7750-SR7",
+    "ne-id": "10.10.10.2",
+    "communication-state-detail": [],
+    "hardware-component": {
+        "container": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": "Sim MfgDeviation card-1",
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "installed-and-expected",
+                "component-id": "shelf=1/slot=1",
+                "ne-name": "R2-PE",
+                "provisioned-type": "card_iom3_xp_c",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1']"
+                ],
+                "part-number": "a7e5937e7af44f92ac922b96801107a7",
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [],
+                "class": "container",
+                "mac-address": "00-00-01-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "actual-type": "card_iom3_xp_c",
+                "parent-rel-pos": 1,
+                "serial-num": "card-1",
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - 1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-2"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/slot=2",
+                "ne-name": "R2-PE",
+                "provisioned-type": "unassigned",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=2']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 2,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - 2"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=3']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-3"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/slot=3",
+                "ne-name": "R2-PE",
+                "provisioned-type": "unassigned",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=3']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 3,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - 3"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=4']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-4"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/slot=4",
+                "ne-name": "R2-PE",
+                "provisioned-type": "unassigned",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=4']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 4,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - 4"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=5']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-5"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/slot=5",
+                "ne-name": "R2-PE",
+                "provisioned-type": "unassigned",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=5']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 5,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - 5"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=6']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": "Sim MfgDeviation card-6",
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "installed-and-expected",
+                "component-id": "shelf=1/slot=6",
+                "ne-name": "R2-PE",
+                "provisioned-type": "card_sfm5_e",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']"
+                ],
+                "part-number": "1225208ca8614a7bbd9fdc3c5921c210",
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=6']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [],
+                "class": "container",
+                "mac-address": "C8-20-06-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "actual-type": "card_sfm5_e",
+                "parent-rel-pos": 6,
+                "serial-num": "card-6",
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - A"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=7']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "expected-not-installed",
+                "component-id": "shelf=1/slot=7",
+                "ne-name": "R2-PE",
+                "provisioned-type": "card_sfm5_e",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']"
+                ],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=7']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "provisioned"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 7,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Card Slot - B"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "installed-and-expected",
+                "component-id": "shelf=1/slot=1/card=1/slot=1",
+                "ne-name": "R2-PE",
+                "provisioned-type": "mda_m20_1gb_xp_sfp",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']"
+                ],
+                "part-number": "Sim Part#",
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=1']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [],
+                "class": "container",
+                "mac-address": "00-00-01-01-00-01",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "actual-type": "mda_m20_1gb_xp_sfp",
+                "parent-rel-pos": 1,
+                "serial-num": "mda-1",
+                "network-element": "10.10.10.2",
+                "name": "Daughter Card Slot - 1/1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-2"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/slot=1/card=1/slot=2",
+                "ne-name": "R2-PE",
+                "provisioned-type": "mda_unknown",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=2']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "mda_unknown",
+                "parent-rel-pos": 2,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Daughter Card Slot - 1/2"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:SFMSlot-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": "Sim MfgDeviation sfm-1",
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "installed-and-expected",
+                "component-id": "shelf=1/sfmslot=1",
+                "ne-name": "R2-PE",
+                "provisioned-type": "card_sfm5_7",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/sfmslot=1/card=1']"
+                ],
+                "part-number": "Sim Part#",
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=1']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "actual-type": "card_sfm5_7",
+                "parent-rel-pos": 1,
+                "serial-num": "sfm-1",
+                "network-element": "10.10.10.2",
+                "name": "SFM Slot - 1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:SFMSlot-2"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "holder-state": "not-expected-not-installed",
+                "component-id": "shelf=1/sfmslot=2",
+                "ne-name": "R2-PE",
+                "provisioned-type": "unassigned",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "equipment-extension-container:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/container/equipment-extension-container:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=2']/equipment-extension-container:extension"
+                    }
+                },
+                "state-reason": [
+                    "empty"
+                ],
+                "class": "container",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "actual-type": "unassigned",
+                "parent-rel-pos": 2,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "SFM Slot - 2"
+            }
+        ],
+        "power-supply": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/power-supply",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/power-supply[component-id='shelf=1/powersupply=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:psTray-3-1-1"
+                    ]
+                },
+                "mac-address": null,
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [],
+                "oper-state": "enabled",
+                "description": null,
+                "mfg-date": null,
+                "mfg-assembly-number": null,
+                "hw-mac-address": null,
+                "admin-state": "unlocked",
+                "parent-rel-pos": 1,
+                "ne-id": "10.10.10.2",
+                "serial-num": null,
+                "component-id": "shelf=1/powersupply=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "network-element": "10.10.10.2",
+                "standby-state": "providing-service",
+                "name": "Power Supply Tray - 1/1",
+                "state-reason": [],
+                "class": "power-supply"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/power-supply",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/power-supply[component-id='shelf=1/powersupply=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:psTray-3-1-2"
+                    ]
+                },
+                "mac-address": null,
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [],
+                "oper-state": "enabled",
+                "description": null,
+                "mfg-date": null,
+                "mfg-assembly-number": null,
+                "hw-mac-address": null,
+                "admin-state": "unlocked",
+                "parent-rel-pos": 2,
+                "ne-id": "10.10.10.2",
+                "serial-num": null,
+                "component-id": "shelf=1/powersupply=2",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "network-element": "10.10.10.2",
+                "standby-state": "providing-service",
+                "name": "Power Supply Tray - 1/2",
+                "state-reason": [],
+                "class": "power-supply"
+            }
+        ],
+        "other": [],
+        "fan": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/fan",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/fan[component-id='shelf=1/fan=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:fanTray-3-1-1"
+                    ]
+                },
+                "mac-address": null,
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [],
+                "oper-state": "enabled",
+                "description": null,
+                "mfg-date": null,
+                "mfg-assembly-number": null,
+                "hw-mac-address": null,
+                "admin-state": "unlocked",
+                "parent-rel-pos": 1,
+                "ne-id": "10.10.10.2",
+                "serial-num": null,
+                "component-id": "shelf=1/fan=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "network-element": "10.10.10.2",
+                "standby-state": "providing-service",
+                "name": "Fan Tray - 1/1",
+                "state-reason": [],
+                "class": "fan"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/fan",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/fan[component-id='shelf=1/fan=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:fanTray-3-1-2"
+                    ]
+                },
+                "mac-address": null,
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                "mfg-deviations": null,
+                "mfg-name": null,
+                "availability-state": [],
+                "oper-state": "enabled",
+                "description": null,
+                "mfg-date": null,
+                "mfg-assembly-number": null,
+                "hw-mac-address": null,
+                "admin-state": "unlocked",
+                "parent-rel-pos": 2,
+                "ne-id": "10.10.10.2",
+                "serial-num": null,
+                "component-id": "shelf=1/fan=2",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "network-element": "10.10.10.2",
+                "standby-state": "providing-service",
+                "name": "Fan Tray - 1/2",
+                "state-reason": [],
+                "class": "fan"
+            }
+        ],
+        "rack": [],
+        "port": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=1']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": ":hc=10.2.4.1/29:",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-5E-E9-6F",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-5E-E9-6F",
+                "parent-rel-pos": 1,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=1']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-1@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "hybrid",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35684352,
+                        "actual-rate": 10000.0,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=10']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-10"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=10']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=10",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-0A-AF-65",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-0A-AF-65",
+                "parent-rel-pos": 10,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=10']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-10@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 35979264,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/10"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=11']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-11"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=11']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=11",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-CE-D2-8B",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-CE-D2-8B",
+                "parent-rel-pos": 11,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=11']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-11@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "access",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 36012032,
+                        "actual-rate": 10000.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/11"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=12']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-12"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=12']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=12",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-12-46-3D",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-12-46-3D",
+                "parent-rel-pos": 12,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=12']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-12@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36044800,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/12"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=13']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-13"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=13']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=13",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-55-7C-5A",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-55-7C-5A",
+                "parent-rel-pos": 13,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=13']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-13@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36077568,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/13"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=14']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-14"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=14']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=14",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-80-28-E5",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-80-28-E5",
+                "parent-rel-pos": 14,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=14']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-14@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36110336,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/14"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=15']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-15"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=15']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=15",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-0F",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-0F",
+                "parent-rel-pos": 15,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=15']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-15@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36143104,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/15"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=16']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-16"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=16']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=16",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-10",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-10",
+                "parent-rel-pos": 16,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=16']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-16@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36175872,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/16"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=17']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-17"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=17']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=17",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-11",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-11",
+                "parent-rel-pos": 17,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=17']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-17@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36208640,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/17"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=18']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-18"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=18']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=18",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-12",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-12",
+                "parent-rel-pos": 18,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=18']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-18@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36241408,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/18"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=19']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-19"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=19']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=19",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-13",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-13",
+                "parent-rel-pos": 19,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=19']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-19@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36274176,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/19"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-2"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=2",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-95-71-FB",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-95-71-FB",
+                "parent-rel-pos": 2,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-2@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "hybrid",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35717120,
+                        "actual-rate": 10000.0,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lag-member-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/lag-member-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']/lag-member-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:lag:interface-10:port-1/1/2"
+                            ]
+                        },
+                        "lag-id": "10",
+                        "standby-state": "providing-service",
+                        "priority": 32768,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/2"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=20']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-20"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=20']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=20",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-01-01-00-14",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-01-01-00-14",
+                "parent-rel-pos": 20,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=20']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-20@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 36306944,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/20"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=3']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-3"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=3']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": ":hc=10.48.2.2/29:",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=3",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-A6-1D-01",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-A6-1D-01",
+                "parent-rel-pos": 3,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=3']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-3@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet1000",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35749888,
+                        "actual-rate": 1000000.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/3"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=4']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-4"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=4']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=4",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-54-63-79",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-54-63-79",
+                "parent-rel-pos": 4,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=4']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-4@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "access",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1518,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35782656,
+                        "actual-rate": 10000.0,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/4"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=5']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-5"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=5']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=5",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-B2-5C-80",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-B2-5C-80",
+                "parent-rel-pos": 5,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=5']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-5@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "access",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1518,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35815424,
+                        "actual-rate": 10000.0,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/5"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=6']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-6"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=6']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=6",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-7B-88-25",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-7B-88-25",
+                "parent-rel-pos": 6,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=6']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-6@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "access",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1518,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 35848192,
+                        "actual-rate": 10000.0,
+                        "encap-type": "dot1q"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/6"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=7']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-7"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=7']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=7",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-72-8B-C8",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-72-8B-C8",
+                "parent-rel-pos": 7,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=7']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-7@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 35880960,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/7"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=8']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-8"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=8']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=8",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-43-3B-94",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-43-3B-94",
+                "parent-rel-pos": 8,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=8']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-8@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 35913728,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/8"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=9']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-9"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=9']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100/Gig Ethernet SFP",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1/port=9",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-E4-22-8E",
+                "oper-state": "disabled",
+                "mfg-date": "01/01/2003",
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-E4-22-8E",
+                "parent-rel-pos": 9,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=9']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard:port-9@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet10",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 8704,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 35946496,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port 1/1/9"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=1']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=6/card=6/port=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "52-54-00-A3-DB-F3",
+                "oper-state": "enabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "52-54-00-A3-DB-F3",
+                "parent-rel-pos": 1,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=1']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-1@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "full-duplex",
+                        "port-index": 201359360,
+                        "actual-rate": 100000.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port A/1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=3']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-3"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=3']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=6/card=6/port=3",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-00-00-00-00",
+                "parent-rel-pos": 3,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=3']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-3@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 201424896,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port A/3"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=4']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-4"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=4']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=6/card=6/port=4",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-00-00-00-00",
+                "parent-rel-pos": 4,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=4']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card:port-4@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 201457664,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port A/4"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-1"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=1']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=7/card=7/port=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-00-00-00-00",
+                "parent-rel-pos": 1,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=1']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-1@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 234913792,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port B/1"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=3']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-3"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=3']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=7/card=7/port=3",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-00-00-00-00",
+                "parent-rel-pos": 3,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=3']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-3@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 234979328,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port B/3"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=4']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-4"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']",
+                "mfg-deviations": null,
+                "equipment-extension-port:extension": {
+                    "@": {
+                        "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/equipment-extension-port:extension",
+                        "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=4']/equipment-extension-port:extension"
+                    }
+                },
+                "optical-port-details": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": "10/100 Ethernet TX",
+                "mfg-assembly-number": null,
+                "admin-state": "locked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=7/card=7/port=4",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "port",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "lldp-local-port": [],
+                "hw-mac-address": "00-00-00-00-00-00",
+                "parent-rel-pos": 4,
+                "serial-num": null,
+                "port-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/port/port-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=4']/port-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card:port-4@portDetails"
+                            ]
+                        },
+                        "rate": "ethernet100",
+                        "port-mode": "trunk",
+                        "actual-rate-units": "kbps",
+                        "mtu-value": 1514,
+                        "duplex": "full-duplex",
+                        "port-type": "ethernet-port",
+                        "auto-negotiate": "enabled",
+                        "operational-duplex": "unknown",
+                        "port-index": 235012096,
+                        "actual-rate": 0.0,
+                        "encap-type": "null-encap"
+                    }
+                ],
+                "lag-member-details": [],
+                "lldp-remote-peer": [],
+                "network-element": "10.10.10.2",
+                "name": "Port B/4"
+            }
+        ],
+        "module": [],
+        "card": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1']",
+                "mfg-deviations": "Sim MfgDeviation card-1",
+                "vnf-equipment": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1",
+                "ne-name": "R2-PE",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=1']"
+                ],
+                "part-number": "a7e5937e7af44f92ac922b96801107a7",
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "card",
+                "mac-address": "00-00-01-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "parent-rel-pos": 1,
+                "serial-num": "card-1",
+                "network-element": "10.10.10.2",
+                "name": "Card - 1",
+                "card-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card/card-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1']/card-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card@cardDetails"
+                            ]
+                        },
+                        "equipped-ports": null,
+                        "last-boot-up-reason": "Hard Reboot",
+                        "card-type": "card_iom3_xp_c",
+                        "capabilities": [],
+                        "available-slots": 2,
+                        "installed-slots": 1,
+                        "memory-size": 6144
+                    }
+                ]
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1/card=1/slot=1']",
+                "mfg-deviations": "Sim MfgDeviation mda-1",
+                "vnf-equipment": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=1/card=1/slot=1/card=1",
+                "ne-name": "R2-PE",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=5']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=20']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=4']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=11']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=7']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=16']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=10']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=9']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=15']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=12']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=8']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=19']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=14']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=17']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=3']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=18']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=6']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=13']"
+                ],
+                "part-number": "Sim Part#",
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "card",
+                "mac-address": "00-00-01-01-00-01",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "parent-rel-pos": 1,
+                "serial-num": "mda-1",
+                "network-element": "10.10.10.2",
+                "name": "Daughter Card - 1/1",
+                "card-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card/card-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=1/card=1/slot=1/card=1']/card-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-1:card:daughterCardSlot-1:daughterCard@cardDetails"
+                            ]
+                        },
+                        "equipped-ports": 20,
+                        "last-boot-up-reason": null,
+                        "card-type": "mda_m20_1gb_xp_sfp",
+                        "capabilities": [
+                            "Ethernet Capable"
+                        ],
+                        "available-slots": null,
+                        "installed-slots": null,
+                        "memory-size": null
+                    }
+                ]
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/sfmslot=1/card=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:SFMSlot-1:card"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=1']",
+                "mfg-deviations": "Sim MfgDeviation sfm-1",
+                "vnf-equipment": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/sfmslot=1/card=1",
+                "ne-name": "R2-PE",
+                "children": [],
+                "part-number": "Sim Part#",
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "card",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "parent-rel-pos": 1,
+                "serial-num": "sfm-1",
+                "network-element": "10.10.10.2",
+                "name": "Processor Card - 1",
+                "card-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card/card-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/sfmslot=1/card=1']/card-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:SFMSlot-1:card@cardDetails"
+                            ]
+                        },
+                        "equipped-ports": null,
+                        "last-boot-up-reason": null,
+                        "card-type": "card_sfm5_7",
+                        "capabilities": [],
+                        "available-slots": null,
+                        "installed-slots": null,
+                        "memory-size": null
+                    }
+                ]
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=6']",
+                "mfg-deviations": "Sim MfgDeviation card-6",
+                "vnf-equipment": [],
+                "mfg-name": null,
+                "availability-state": [],
+                "description": null,
+                "mfg-assembly-number": "01-2345-67",
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=6/card=6",
+                "ne-name": "R2-PE",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=4']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=6/card=6/port=3']"
+                ],
+                "part-number": "1225208ca8614a7bbd9fdc3c5921c210",
+                "standby-state": "providing-service",
+                "state-reason": [],
+                "class": "card",
+                "mac-address": "C8-20-06-00-00-00",
+                "oper-state": "enabled",
+                "mfg-date": "01/01/2003",
+                "hw-mac-address": null,
+                "parent-rel-pos": 6,
+                "serial-num": "card-6",
+                "network-element": "10.10.10.2",
+                "name": "Processor Card - A",
+                "card-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card/card-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=6/card=6']/card-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-6:card@cardDetails"
+                            ]
+                        },
+                        "equipped-ports": null,
+                        "last-boot-up-reason": null,
+                        "card-type": "card_sfm5_e",
+                        "capabilities": [],
+                        "available-slots": null,
+                        "installed-slots": null,
+                        "memory-size": null
+                    }
+                ]
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card"
+                    ]
+                },
+                "parent": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=7']",
+                "mfg-deviations": null,
+                "vnf-equipment": [],
+                "mfg-name": null,
+                "availability-state": [
+                    "not-installed"
+                ],
+                "description": null,
+                "mfg-assembly-number": null,
+                "admin-state": "unlocked",
+                "ne-id": "10.10.10.2",
+                "component-id": "shelf=1/slot=7/card=7",
+                "ne-name": "R2-PE",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=3']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=7/card=7/port=4']"
+                ],
+                "part-number": null,
+                "standby-state": "providing-service",
+                "state-reason": [
+                    "provisioned"
+                ],
+                "class": "card",
+                "mac-address": "00-00-00-00-00-00",
+                "oper-state": "disabled",
+                "mfg-date": null,
+                "hw-mac-address": null,
+                "parent-rel-pos": 7,
+                "serial-num": null,
+                "network-element": "10.10.10.2",
+                "name": "Processor Card - B",
+                "card-details": [
+                    {
+                        "@": {
+                            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/card/card-details",
+                            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/card[component-id='shelf=1/slot=7/card=7']/card-details",
+                            "nsp-model:sources": [
+                                "fdn:realm:sam:network:10.10.10.2:shelf-1:cardSlot-7:card@cardDetails"
+                            ]
+                        },
+                        "equipped-ports": null,
+                        "last-boot-up-reason": null,
+                        "card-type": "card_sfm5_e",
+                        "capabilities": [],
+                        "available-slots": null,
+                        "installed-slots": null,
+                        "memory-size": null
+                    }
+                ]
+            }
+        ],
+        "shelf": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/hardware-component/shelf",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/shelf[component-id='shelf=1']",
+                    "nsp-model:sources": [
+                        "fdn:realm:sam:network:10.10.10.2:shelf-1"
+                    ]
+                },
+                "mac-address": "C8-20-FF-00-00-00",
+                "mfg-deviations": "Sim MfgDeviation vSIM",
+                "mfg-name": null,
+                "availability-state": [],
+                "oper-state": "enabled",
+                "description": null,
+                "mfg-date": "01/01/2003",
+                "mfg-assembly-number": "01-2345-67",
+                "hw-mac-address": null,
+                "admin-state": "unlocked",
+                "parent-rel-pos": 1,
+                "ne-id": "10.10.10.2",
+                "serial-num": "vSIM",
+                "parent-network-element": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "component-id": "shelf=1",
+                "ne-name": "R2-PE",
+                "children": [
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/sfmslot=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/power-supply[component-id='shelf=1/powersupply=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=7']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=6']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/fan[component-id='shelf=1/fan=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/power-supply[component-id='shelf=1/powersupply=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/fan[component-id='shelf=1/fan=2']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=3']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=1']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=5']",
+                    "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/container[component-id='shelf=1/slot=4']"
+                ],
+                "part-number": "Sim Part#",
+                "network-element": "10.10.10.2",
+                "standby-state": "providing-service",
+                "name": "R2-PE",
+                "state-reason": [],
+                "class": "shelf"
+            }
+        ],
+        "radio": []
+    },
+    "lag": [
+        {
+            "@": {
+                "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/lag",
+                "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/lag[lag-id='lag-10']",
+                "nsp-model:sources": [
+                    "fdn:app:mdm-ami-cmodel:10.10.10.2:equipment:LAG:/lag[lag-name='lag-10']",
+                    "fdn:yang:nsp-network:/nsp-network:network/node[node-id='10.10.10.2']/node-root/nokia-conf:configure/lag[lag-name='lag-10']",
+                    "fdn:yang:nsp-network:/nsp-network:network/node[node-id='10.10.10.2']/node-root/nokia-state:state/lag[lag-name='lag-10']"
+                ]
+            },
+            "lag-index": null,
+            "configured-address": "c8:20:ff:00:01:4a",
+            "parent": null,
+            "lag-id": "lag-10",
+            "availability-state": [],
+            "operational-speed": 10.0,
+            "oper-state": "enabled",
+            "description": ":hc=10.1.4.2/29",
+            "operational-speed-units": "mbps",
+            "admin-state": "unlocked",
+            "ne-id": "10.10.10.2",
+            "multi-chassis-lag-member": [],
+            "ne-name": "R2-PE",
+            "lag-mode": "hybrid",
+            "standby-state": "providing-service",
+            "members": [],
+            "name": "LAG-10",
+            "state-reason": [],
+            "encap-type": "null-encap",
+            "parent-ne": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']"
+        },
+        {
+            "@": {
+                "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/lag",
+                "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/lag[lag-id='10']",
+                "nsp-model:sources": [
+                    "fdn:realm:sam:network:10.10.10.2:lag:interface-10"
+                ]
+            },
+            "lag-index": 1342177290,
+            "configured-address": "C8-20-FF-00-01-4A",
+            "parent": null,
+            "lag-id": "10",
+            "availability-state": [],
+            "operational-speed": 10000.0,
+            "oper-state": "enabled",
+            "description": ":hc=10.1.4.2/29",
+            "operational-speed-units": "kbps",
+            "admin-state": "unlocked",
+            "ne-id": "10.10.10.2",
+            "multi-chassis-lag-member": [],
+            "ne-name": "R2-PE",
+            "lag-mode": "hybrid",
+            "standby-state": "providing-service",
+            "members": [
+                "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/hardware-component/port[component-id='shelf=1/slot=1/card=1/slot=1/card=1/port=2']/lag-member-details"
+            ],
+            "name": "Lag 10",
+            "state-reason": [],
+            "encap-type": "dot1q",
+            "parent-ne": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']"
+        }
+    ],
+    "ne-name": "R2-PE",
+    "lldp-chassis": [],
+    "standby-state": "providing-service",
+    "clli-code": null,
+    "resync-state": "done",
+    "state-reason": [],
+    "vnf-instance": [],
+    "longitude": 0.0,
+    "mac-address": "C8-20-FF-00-00-00",
+    "product": "7750 SR",
+    "communication-state": "up",
+    "oper-state": "enabled",
+    "version": "TiMOS-C-21.10.R2",
+    "network-type": "ip-network",
+    "equipment-extension-ne:extension": {
+        "@": {
+            "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension",
+            "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension"
+        },
+        "deployment": [
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN01-single-instance-2110-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN01-single-instance-2110-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN01-single-instance-2110-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN01-single-instance-2110-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN02-single-instance-2210-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN02-single-instance-2210-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN03-single-instance-2310-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2310-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN03-single-instance-2310-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2310-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN03-single-instance-2311-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2311-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN03-single-instance-2311-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2311-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN04-single-instance-2410-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2410-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN04-single-instance-2410-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2410-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN04-single-instance-2411-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2411-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN04-single-instance-2411-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2411-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN01-single-instance-2110-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN01-single-instance-2110-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN02-single-instance-2210-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN02-single-instance-2210-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN02-single-instance-2211-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN02-single-instance-2211-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN03-single-instance-2310-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2310-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN03-single-instance-2310-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2310-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN03-single-instance-2311-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2311-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN03-single-instance-2311-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN03-single-instance-2311-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN04-single-instance-2410-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2410-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN04-single-instance-2410-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2410-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN04-single-instance-2411-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2411-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN04-single-instance-2411-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN04-single-instance-2411-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN-NonAutoBind-single-instance-4020-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN-NonAutoBind-single-instance-4020-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyStatement_SR'][target-identifier-value='L3VPN-NonAutoBind-single-instance-4020-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyStatement_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN-NonAutoBind-single-instance-4020-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-policystatement-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN-NonAutoBind-single-instance-4020-EXPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN-NonAutoBind-single-instance-4020-EXPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            },
+            {
+                "@": {
+                    "nsp-model:schema-nodeid": "/nsp-equipment:network/network-element/equipment-extension-ne:extension/deployment",
+                    "nsp-model:identifier": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']/equipment-extension-ne:extension/deployment[template-name='policyCommunity_SR'][target-identifier-value='L3VPN-NonAutoBind-single-instance-4020-IMPORT']",
+                    "nsp-model:sources": []
+                },
+                "template-name": "policyCommunity_SR",
+                "target": "/nsp-equipment:network/network-element[ne-id='10.10.10.2']",
+                "target-identifier-value": "L3VPN-NonAutoBind-single-instance-4020-IMPORT",
+                "deployment-status": "deployed-aligned",
+                "intent-type": "icm-router-communitypolicy-srrouter",
+                "intent-type-version": "1",
+                "category": "router"
+            }
+        ]
+    },
+    "ip-address": "192.168.100.32",
+    "managed-state": "managed",
+    "name": "R2-PE",
+    "location": "N/A"
+}
