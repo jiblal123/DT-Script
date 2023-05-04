@@ -1,0 +1,119 @@
+name: L2Topology
+topology:
+    nodes:
+        R3-P:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R2-PE:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R4-P:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R7-PE-ASBR:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R8-PE:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:19.10.R9
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card= ___ lc: cpu=2 ram=6 max_nics=10
+                chassis=SR7 slot=1 card= mda/1='
+            license: license.txt
+        R9-PE-ASBR:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R6-PE-ASBR:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R1-PE:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:20.7.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR-2s slot=A card=cpm-2s ___ lc: cpu=2
+                ram=6 max_nics=10 chassis=SR-2s slot=1 card=xcm-2s mda/1=s18-100gb-qsfp28:he1200g+'
+            license: license.txt
+        R10-PE-ASBR:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:21.10.R2
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
+            license: license.txt
+        R5-PE:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:19.10.R9
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SRa8 slot=A card=cpm-a ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SRa8 slot=1 card=iom-a mda/1=ma20-1gb-tx'
+            license: license.txt
+    links:
+    -   endpoints:
+        - R8-PE:eth5
+        - R9-PE-ASBR:eth2
+    -   endpoints:
+        - R3-P:eth3
+        - R4-P:eth3
+    -   endpoints:
+        - R3-P:eth4
+        - R5-PE:eth2
+    -   endpoints:
+        - R4-P:eth2
+        - R6-PE-ASBR:eth1
+    -   endpoints:
+        - R7-PE-ASBR:eth1
+        - R10-PE-ASBR:eth3
+    -   endpoints:
+        - R4-P:eth4
+        - R7-PE-ASBR:eth2
+    -   endpoints:
+        - R3-P:eth5
+        - R7-PE-ASBR:eth3
+    -   endpoints:
+        - R3-P:eth2
+        - R6-PE-ASBR:eth2
+    -   endpoints:
+        - R4-P:eth5
+        - R5-PE:eth5
+    -   endpoints:
+        - R6-PE-ASBR:eth3
+        - R9-PE-ASBR:eth3
+    -   endpoints:
+        - R2-PE:eth1
+        - R4-P:eth1
+    -   endpoints:
+        - R1-PE:eth1
+        - R3-P:eth1
+    -   endpoints:
+        - R1-PE:eth2
+        - R2-PE:eth2
+    -   endpoints:
+        - R2-PE:eth5
+        - R2-PE:eth6
+    -   endpoints:
+        - R5-PE:eth10
+        - R7-PE-ASBR:eth10
