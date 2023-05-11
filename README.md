@@ -1,1 +1,2 @@
 # DT-Script
+This code is part of my Bachelor's thesis and should not be used as-is. The purpose of this code is explained in my thesis, along with the class description.  Inside Each function in the comment section  it is documented to explain how the code works. To analyze the code, please start by reading RequestData.py first, followed by Filter.py, card.py, config.py, and finally CreateYAML.py.
