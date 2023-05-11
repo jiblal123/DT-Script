@@ -99,7 +99,7 @@ class ReqestData:
         print("you are in config")
         url = "https://{{server}}:8546/wfm/api/v1/action-execution" 
         payload = json.dumps({ "name": "nsp.https", 
-                              "input": { "url": "https://147.75.202.27:8443/nfm-p/rest/api/v2/netw/NetworkElement/executeMultiCli/network%3A10.10.10.1", 
+                              "input": { "url": "https://{{server}}:8443/nfm-p/rest/api/v2/netw/NetworkElement/executeMultiCli/network%3A10.10.10.1", 
                                         "method": "PUT", 
                                         "cert": "/opt/nsp/os/ssl/certs/nsp/nsp.pem",
                                           "contentType": "application/json", 

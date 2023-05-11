@@ -1,8 +1,8 @@
-VerDT
-__pycache__
-backupConfig
-ConfigFromAPI
-configData
+VerDT/
+__pycache__/
+backupConfig/
+ConfigFromAPI/
+configData/
 
 
 

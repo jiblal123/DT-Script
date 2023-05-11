@@ -8,6 +8,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SRa8 slot=A card=cpm-a ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SRa8 slot=1 card=iom-a mda/1=ma20-1gb-tx'
             license: license.txt
+            startup-config: R5-PEconfig.txt
         R3-P:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -15,6 +16,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R3-Pconfig.txt
         R2-PE:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -22,6 +24,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R2-PEconfig.txt
         R4-P:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -29,6 +32,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R4-Pconfig.txt
         R7-PE-ASBR:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -36,13 +40,15 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R7-PE-ASBRconfig.txt
         R8-PE:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:19.10.R9
             group: sros
-            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card= ___ lc: cpu=2 ram=6 max_nics=10
-                chassis=SR7 slot=1 card= mda/1='
+            type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R8-PEconfig.txt
         R9-PE-ASBR:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -50,6 +56,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R9-PE-ASBRconfig.txt
         R6-PE-ASBR:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -57,6 +64,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR12 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR12 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R6-PE-ASBRconfig.txt
         R1-PE:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:20.7.R2
@@ -64,6 +72,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR-2s slot=A card=cpm-2s ___ lc: cpu=2
                 ram=6 max_nics=10 chassis=SR-2s slot=1 card=xcm-2s mda/1=s18-100gb-qsfp28:he1200g+'
             license: license.txt
+            startup-config: R1-PEconfig.txt
         R10-PE-ASBR:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -71,6 +80,7 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
+            startup-config: R10-PE-ASBRconfig.txt
     links:
     -   endpoints:
         - R8-PE:eth5

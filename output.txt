@@ -1,8 +1,8 @@
-Last login: Thu May  4 15:29:56 2023 from 10.1.1.46
+Last login: Fri May  5 08:19:48 2023 from 10.1.1.14
 Nokia products are intended for commercial uses. Without the appropriate network design engineering, they must not be sold, licensed or otherwise distributed for use in any hazardous environments requiring fail-safe performance, such as in the operation of nuclear facilities, aircraft navigation or communication systems, air traffic control, direct life-support machines, or weapons systems, in which the failure of products could lead directly to death, personal injury, or severe physical or environmental damage. The use, sale, license or other distribution of the products by any party for any such application without the prior written consent of Nokia, is NOT AUTHORIZED BY NOKIA AND shall be at such party's sole risk.
-[root@sdn2 ~]# ssh asad@192.168.100.39
+[root@sdn2 ~]# ssh asad@192.168.100.40
 
-asad@192.168.100.39's password: 
+asad@192.168.100.40's password: 
 
  SR OS Software
  Copyright (c) Nokia 2021.  All Rights Reserved.
@@ -36,7 +36,7 @@ ademarks are the property of their respective owners.
  If you require further assistance please contact us by sending an email
  to support@nokia.com.
 
-A:R9-PE-ASBR# show card 
+A:R10-PE-ASBR# show card 
 
 ===============================================================================
 Card Summary
@@ -48,9 +48,9 @@ Slot      Provisioned Type                         Admin Operational   Comments
 A         cpm5                                     up    up/active     
 B         cpm5                                     up    down/standby  
               (not equipped)                       
-================================================
-===============================
-A:R9-PE-ASBR# show mda 
+===============================================
+================================
+A:R10-PE-ASBR# show mda 
 
 ===============================================================================
 MDA Summary
@@ -60,4 +60,4 @@ Slot  Mda   Provisioned Type                            Admin     Operational
 -------------------------------------------------------------------------------
 1     1     m20-1gb-xp-sfp                              up        up
 ===============================================================================
-A:R9-PE-ASBR# 
+A:R10-PE-ASBR# 
