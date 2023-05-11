@@ -1,6 +1,13 @@
 name: L2Topology
 topology:
     nodes:
+        R5-PE:
+            kind: vr-sros
+            image: registry.srlinux.dev/pub/vr-sros:19.10.R9
+            group: sros
+            type: 'cp: cpu=2 ram=6 chassis=SRa8 slot=A card=cpm-a ___ lc: cpu=2 ram=6
+                max_nics=10 chassis=SRa8 slot=1 card=iom-a mda/1=ma20-1gb-tx'
+            license: license.txt
         R3-P:
             kind: vr-sros
             image: registry.srlinux.dev/pub/vr-sros:21.10.R2
@@ -64,13 +71,6 @@ topology:
             type: 'cp: cpu=2 ram=6 chassis=SR7 slot=A card=cpm5 ___ lc: cpu=2 ram=6
                 max_nics=10 chassis=SR7 slot=1 card=iom3-xp-c mda/1=m20-1gb-xp-sfp'
             license: license.txt
-        R5-PE:
-            kind: vr-sros
-            image: registry.srlinux.dev/pub/vr-sros:19.10.R9
-            group: sros
-            type: 'cp: cpu=2 ram=6 chassis=SRa8 slot=A card=cpm-a ___ lc: cpu=2 ram=6
-                max_nics=10 chassis=SRa8 slot=1 card=iom-a mda/1=ma20-1gb-tx'
-            license: license.txt
     links:
     -   endpoints:
         - R8-PE:eth5
@@ -111,6 +111,9 @@ topology:
     -   endpoints:
         - R1-PE:eth2
         - R2-PE:eth2
+    -   endpoints:
+        - R8-PE:eth2
+        - R10-PE-ASBR:eth2
     -   endpoints:
         - R2-PE:eth5
         - R2-PE:eth6

@@ -13,12 +13,12 @@ class config():
 
 
     def getConfigFile(self, shell, ne_name= "r1"):
+        """This function create Config file for all node Nodes
 
-
-
-
-
-
+        Parameter: Shell Object,  and Ne_name (node Name)
+        
+        
+        """
         # # get configuration from SSH tunnel. 
         # client = paramiko.SSHClient() 
         # client.set_missing_host_key_policy(paramiko.AutoAddPolicy()) 
@@ -38,11 +38,11 @@ class config():
         # time.sleep(2) 
         #output = shell.recv(1024).decode()
         outputCollection=""
+        # Same logic as for Card Detail applied here
         while shell.recv_ready(): 
             tmp = shell.recv(1024) 
-        #     # if not tmp: 
-        #     #     break 
-            #print(tmp.decode())
+       
+            
 
             outputCollection= outputCollection + tmp.decode() #+"\n" # collecting all output from Node.
 
@@ -51,12 +51,9 @@ class config():
         #print((outputCollection))
         StartingIndex= outputCollection.find("# TiMOS")
         EndingIndex= outputCollection.rfind("# Finished")
-        print(StartingIndex, "---------",EndingIndex)
-        print(outputCollection[EndingIndex])
 
-        print (outputCollection[StartingIndex:EndingIndex])
-        #print(outputCollection)
-
+        #Slice the value between TiMOS and finished. This sliced data is configuration
+        # This will create a config file with the given node name. 
         with open(f'configData/{ne_name}config.txt', 'w') as f:
                 f.write(outputCollection[StartingIndex:EndingIndex])
         shell.close()

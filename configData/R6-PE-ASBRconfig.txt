@@ -3,7 +3,7 @@
 # Built on Wed Dec 15 14:15:11 PST 2021 by builder in /builds/c/2110B/R2/panos/main/sros
 # Configuration format version 21.10 revision 0
 
-# Generated THU MAY 04 08:33:24 2023 UTC
+# Generated THU MAY 04 15:17:11 2023 UTC
 
 exit all
 configure
@@ -1605,4 +1605,1042 @@ echo "Service Configuration"
                 address 6.6.6.6/24
                 ip-mtu 1492
                 sap 1/1/10:2420 create
-        
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2420
+                    vrf-import "L3VPN04-multi-instance-2420-IMPORT"
+                    vrf-export "L3VPN04-multi-instance-2420-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 23 name "L3VPN04-multi-instance-InterAS-A-2430-6" customer 1 create
+            description "L3VPN04-multi-instance-InterAS-A-2430"
+            router-id 10.10.10.6
+            autonomous-system 65000
+            interface "int_2430_1" create
+                description "L3VPN04-multi-instance-InterAS-A-2430"
+                address 10.6.9.1/30
+                ip-mtu 1492
+                sap 1/1/3:2430 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2430
+                    vrf-import "L3VPN04-multi-instance-InterAS-A-2430-IMPORT"
+                    vrf-export "L3VPN04-multi-instance-InterAS-A-2430-EXPORT"
+                    no shutdown
+                exit
+            exit
+            bgp
+                group "int_2430_1-01"
+                    peer-as 55000
+                    neighbor 10.6.9.2
+                        export "VPN1-EXPORT-INTER-AS"
+                    exit
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 27 name "PW03-single-Instance-1310_R6" customer 1 create
+            description "site 2 description"
+            service-mtu 1500
+            bgp
+                route-distinguisher 65000:1310
+                route-target export target:65000:1310 import target:65000:1310
+            exit
+            bgp-evpn
+                local-attachment-circuit PW03-single-Instance-1310_site2 create
+                    eth-tag 21
+                exit
+                remote-attachment-circuit PW03-single-Instance-1310_site1 create
+                    eth-tag 11
+                exit
+                mpls bgp 1
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            sap 1/1/15 create
+                description "sap description"
+                ingress
+                    qos 100
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 28 name "PW03-multi-Instances-1320_R6" customer 1 create
+            description "site 2 description"
+            service-mtu 1500
+            bgp
+                route-distinguisher 65000:1320
+                route-target export target:65000:1320 import target:65000:1320
+            exit
+            bgp-evpn
+                local-attachment-circuit PW03-multi-Instances-1320_site2 create
+                    eth-tag 21
+                exit
+                remote-attachment-circuit PW03-multi-Instances-1320_site1 create
+                    eth-tag 11
+                exit
+                mpls bgp 1
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            sap 1/1/6 create
+                description "sap description"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 29 name "PW03-mul-InAS-A-65000-1330_R6" customer 1 create
+            description "site 2 PW03-multi-Instances-InterAS-A-65000-1330"
+            service-mtu 1513
+            bgp
+                route-distinguisher 65000:1330
+                route-target export target:65000:1330 import target:65000:1330
+            exit
+            bgp-evpn
+                local-attachment-circuit PW03-mul-InAS-A-65000-1330_site2 create
+                    eth-tag 21
+                exit
+                remote-attachment-circuit PW03-mul-InAS-A-65000-1330_site1 create
+                    eth-tag 11
+                exit
+                mpls bgp 1
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            sap 1/1/3:1330 create
+                description "sap description"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vpls 32 name "EVPN02-single-Instance-igp-3210_R6" customer 1 create
+            description "EVPN02-single-Instance-igp-3210_R6"
+            service-mtu 1500
+            bgp 2
+                route-distinguisher 65000:3210
+                route-target export target:65000:3211 import target:65000:3210
+            exit
+            bgp-evpn
+                mpls bgp 2
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            stp
+                shutdown
+            exit
+            sap 1/1/10:3210 create
+                description "sap description"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vpls 33 name "EVPN02-multi-instances-igp-3220_R6" customer 1 create
+            description "EVPN02-multi-instances-igp-3220_R6"
+            service-mtu 1500
+            bgp 2
+                route-distinguisher 65000:3220
+                route-target export target:65000:3221 import target:65000:3220
+            exit
+            bgp-evpn
+                mpls bgp 2
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            stp
+                shutdown
+            exit
+            sap 1/1/10:3220 create
+                description "sap description"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vpls 34 name "EVPN02-multi-instances-igp-InterAS-A3230_R6" customer 1 create
+            description "EVPN02-multi-instances-igp-InterAS-A3230_R6"
+            service-mtu 1500
+            bgp 2
+                route-distinguisher 65000:3230
+                route-target export target:65000:3230 import target:65000:3231
+            exit
+            bgp-evpn
+                mpls bgp 2
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            stp
+                shutdown
+            exit
+            sap 1/1/3:3230 create
+                description "sap description"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 36 name "PW01-tldp-single-Instance-1110_R6" customer 1 create
+            description "ietf_l2vpn"
+            sap 1/1/10:1110 create
+                no shutdown
+            exit
+            spoke-sdp 1210:1110 vc-type vlan create
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 37 name "PW02-tldp-single-Instance-1210_R6" customer 1 create
+            description "ietf_l2vpn"
+            sap 1/1/11 create
+                no shutdown
+            exit
+            spoke-sdp 1210:1210 vc-type vlan create
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vprn 40 name "L3VPN-Single-Instance-hub-spoke-1052-R6" customer 1 create
+            description "L3VPN-Single-Instance-hub-spoke-1052-R6"
+            router-id 10.10.10.6
+            interface "int_1052_6" create
+                description "int_1052_6"
+                address 6.6.6.6/24
+                ip-mtu 1492
+                sap 1/1/10:1052 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:1052
+                    vrf-target export target:65000:83111 import target:65000:83110
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 41 name "L3VPN05-single-instance-2710-6" customer 1 create
+            description "L3VPN05-single-instance-2710"
+            router-id 10.10.10.6
+            interface "int_2710_1" create
+                description "int_2710_1"
+                address 6.6.6.6/24
+                ip-mtu 1492
+                sap 1/1/10:2710 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    auto-bind-tunnel
+                        resolution-filter
+                            sr-te
+                        exit
+                        resolution filter
+                    exit
+                    route-distinguisher 65000:2710
+                    vrf-import "L3VPN05-single-instance-2710-IMPORT"
+                    vrf-export "L3VPN05-single-instance-2710-EXPORT"
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+        epipe 47 name "PW01-tldp-interAS-A-65000-1130_R6" customer 1 create
+            description "ietf_l2vpn"
+            sap 1/1/3:1130 create
+                no shutdown
+            exit
+            spoke-sdp 1130:1 vc-type vlan create
+                no shutdown
+            exit
+            no shutdown
+        exit
+        epipe 410 name "PW99-single-Instance-Asad-Sven" customer 1 create
+            description "EPIPE 410"
+            service-mtu 1513
+            bgp
+                route-distinguisher 65000:410
+                route-target export target:65000:410 import target:65000:410
+            exit
+            bgp-evpn
+                local-attachment-circuit b create
+                    eth-tag 21
+                exit
+                remote-attachment-circuit a create
+                    eth-tag 11
+                exit
+                evi 410
+                mpls bgp 1
+                    force-vlan-vc-forwarding
+                    ecmp 4
+                    auto-bind-tunnel
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                    no shutdown
+                exit
+            exit
+            sap 1/1/10:410 create
+                description "test"
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vprn 4020 name "L3VPN-NonAutoBind-single-instance-4020" customer 1 create
+            description "L3VPN-NonAutoBind-single-instance-4020"
+            interface "int_4020_1" create
+                address 6.6.6.6/24
+                ip-mtu 1492
+                sap 1/1/10:4020 create
+                exit
+            exit
+            bgp-ipvpn
+                mpls
+                    route-distinguisher 65000:4020
+                    vrf-import "L3VPN-NonAutoBind-single-instance-4020-IMPORT"
+                    vrf-export "L3VPN-NonAutoBind-single-instance-4020-EXPORT"
+                    no shutdown
+                exit
+            exit
+            spoke-sdp 10602:4020 create
+            exit
+            spoke-sdp 10607:4020 create
+            exit
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "Router (Service Side) Configuration"
+#--------------------------------------------------
+    router Base
+#--------------------------------------------------
+echo "ISIS Configuration"
+#--------------------------------------------------
+        isis 0
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "Policy Configuration"
+#--------------------------------------------------
+        policy-options
+            begin
+            prefix-list "LOOPBACK"
+                prefix 10.6.7.1/32 exact
+                prefix 10.10.10.6/32 exact
+                prefix 10.10.10.7/32 exact
+            exit
+            prefix-list "INTER-AS-PREFIX"
+                prefix 10.6.9.0/29 exact
+            exit
+            community "L3VPN01-multi-instance-2120-EXPORT"
+                members "target:65000:2120"
+            exit
+            community "L3VPN01-multi-instance-2120-IMPORT"
+                members "target:65000:2120"
+            exit
+            community "L3VPN02-multi-instance-2220-IMPORT"
+                members "target:65000:2220"
+            exit
+            community "L3VPN02-multi-instance-2221-EXPORT"
+                members "target:65000:2221"
+            exit
+            community "L3VPN03-multi-instance-2320-EXPORT"
+                members "target:65000:23210"
+            exit
+            community "L3VPN03-multi-instance-2320-IMPORT"
+                members "target:65000:23200" "target:65000:23201"
+            exit
+            community "L3VPN04-multi-instance-2420-EXPORT"
+                members "target:65000:24210"
+            exit
+            community "L3VPN04-multi-instance-2420-IMPORT"
+                members "target:65000:24200" "target:65000:24201"
+            exit
+            community "L3VPN01-single-instance-2110-EXPORT"
+                members "target:65000:2110"
+            exit
+            community "L3VPN01-single-instance-2110-IMPORT"
+                members "target:65000:2110"
+            exit
+            community "L3VPN02-single-instance-2210-IMPORT"
+                members "target:65000:2210"
+            exit
+            community "L3VPN02-single-instance-2211-EXPORT"
+                members "target:65000:2211"
+            exit
+            community "L3VPN03-single-instance-2310-EXPORT"
+                members "target:65000:23110"
+            exit
+            community "L3VPN03-single-instance-2310-IMPORT"
+                members "target:65000:23100" "target:65000:23101"
+            exit
+            community "L3VPN04-single-instance-2410-EXPORT"
+                members "target:65000:24110"
+            exit
+            community "L3VPN04-single-instance-2410-IMPORT"
+                members "target:65000:24100" "target:65000:24101"
+            exit
+            community "L3VPN05-single-instance-2510-EXPORT"
+                members "target:65000:2510"
+            exit
+            community "L3VPN05-single-instance-2510-IMPORT"
+                members "target:65000:2510"
+            exit
+            community "L3VPN01-multi-instance-InterAS-A-2130-EXPORT"
+                members "target:65000:2130"
+            exit
+            community "L3VPN01-multi-instance-InterAS-A-2130-IMPORT"
+                members "target:65000:2130"
+            exit
+            community "L3VPN02-multi-instance-InterAS-A-2230-EXPORT"
+                members "target:65000:2230"
+            exit
+            community "L3VPN02-multi-instance-InterAS-A-2230-IMPORT"
+                members "target:65000:2230"
+            exit
+            community "L3VPN02-multi-instance-InterAS-A-2231-EXPORT"
+                members "target:65000:2231"
+            exit
+            community "L3VPN02-multi-instance-InterAS-A-2231-IMPORT"
+                members "target:65000:2231"
+            exit
+            community "L3VPN03-multi-instance-InterAS-A-2330-EXPORT"
+                members "target:65000:23310"
+            exit
+            community "L3VPN03-multi-instance-InterAS-A-2330-IMPORT"
+                members "target:65000:23300" "target:65000:23301"
+            exit
+            community "L3VPN04-multi-instance-InterAS-A-2430-EXPORT"
+                members "target:65000:24310"
+            exit
+            community "L3VPN04-multi-instance-InterAS-A-2430-IMPORT"
+                members "target:65000:24300" "target:65000:24301"
+            exit
+            community "L3VPN-NonAutoBind-single-instance-4020-EXPORT"
+                members "target:65000:4020"
+            exit
+            community "L3VPN-NonAutoBind-single-instance-4020-IMPORT"
+                members "target:65000:4020"
+            exit
+            policy-statement "EXPORT-LU"
+                entry 10
+                    from
+                        prefix-list "LOOPBACK"
+                    exit
+                    action accept
+                    exit
+                exit
+                entry 20
+                    from
+                        prefix-list "INTER-AS-PREFIX"
+                    exit
+                    to
+                        protocol bgp
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "VPN1-EXPORT-INTER-AS"
+                entry 10
+                    from
+                        protocol bgp-vpn
+                    exit
+                    to
+                        protocol bgp
+                    exit
+                    action accept
+                    exit
+                exit
+                entry 20
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp
+                    exit
+                    action accept
+                    exit
+                exit
+                entry 30
+                    from
+                        protocol direct-interface
+                    exit
+                    to
+                        protocol bgp
+                    exit
+                    action accept
+                    exit
+                exit
+                default-action accept
+                exit
+            exit
+            policy-statement "TEST-ENFORCE-RSVP-TE-2140"
+                entry 10
+                    from
+                        protocol bgp-vpn
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-multi-instance-2120-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN01-multi-instance-2120-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-multi-instance-2120-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN01-multi-instance-2120-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-2220-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN02-multi-instance-2220-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-2221-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN02-multi-instance-2221-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-multi-instance-2320-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN03-multi-instance-2320-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-multi-instance-2320-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN03-multi-instance-2320-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-multi-instance-2420-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN04-multi-instance-2420-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-multi-instance-2420-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN04-multi-instance-2420-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-single-instance-2110-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN01-single-instance-2110-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-single-instance-2110-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN01-single-instance-2110-IMPORT"
+                    exit
+                    action accept
+                        local-preference 0
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-single-instance-2210-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN02-single-instance-2210-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-single-instance-2211-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN02-single-instance-2211-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-single-instance-2310-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN03-single-instance-2310-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-single-instance-2310-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN03-single-instance-2310-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-single-instance-2410-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN04-single-instance-2410-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-single-instance-2410-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN04-single-instance-2410-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN05-single-instance-2510-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN05-single-instance-2510-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN05-single-instance-2510-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN05-single-instance-2510-IMPORT"
+                    exit
+                    action accept
+                        local-preference 0
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-multi-instance-InterAS-A-2130-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN01-multi-instance-InterAS-A-2130-EXPORT"
+                    exit
+                exit
+                entry 20
+                    from
+                        protocol bgp
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN01-multi-instance-InterAS-A-2130-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN01-multi-instance-InterAS-A-2130-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN01-multi-instance-InterAS-A-2130-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-InterAS-A-2230-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN02-multi-instance-InterAS-A-2230-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-InterAS-A-2230-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN02-multi-instance-InterAS-A-2230-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-InterAS-A-2231-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN02-multi-instance-InterAS-A-2231-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN02-multi-instance-InterAS-A-2231-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN02-multi-instance-InterAS-A-2231-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-multi-instance-InterAS-A-2330-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN03-multi-instance-InterAS-A-2330-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN03-multi-instance-InterAS-A-2330-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN03-multi-instance-InterAS-A-2330-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-multi-instance-InterAS-A-2430-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN04-multi-instance-InterAS-A-2430-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN04-multi-instance-InterAS-A-2430-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN04-multi-instance-InterAS-A-2430-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN-NonAutoBind-single-instance-4020-EXPORT"
+                entry 10
+                    from
+                        protocol direct
+                    exit
+                    to
+                        protocol bgp-vpn
+                    exit
+                    action accept
+                        community add "L3VPN-NonAutoBind-single-instance-4020-EXPORT"
+                    exit
+                exit
+            exit
+            policy-statement "L3VPN-NonAutoBind-single-instance-4020-IMPORT"
+                entry 10
+                    from
+                        community "L3VPN-NonAutoBind-single-instance-4020-IMPORT"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            commit
+        exit
+#--------------------------------------------------
+echo "BGP Configuration"
+#--------------------------------------------------
+        bgp
+            vpn-apply-import
+            vpn-apply-export
+            hold-time 0
+            min-route-advertisement 5
+            multi-path
+                ipv4 64
+                ipv6 64
+                label-ipv4 64
+                label-ipv6 64
+            exit
+            ibgp-multipath
+            enable-inter-as-vpn
+            advertise-inactive
+            enable-peer-tracking
+            rapid-withdrawal
+            bfd-enable
+            split-horizon
+            link-state-import-enable
+            rapid-update vpn-ipv4 vpn-ipv6 l2-vpn evpn label-ipv4 label-ipv6
+            add-paths
+                ipv4 send 16 receive
+                ipv6 send 16 receive
+                vpn-ipv4 send 16 receive
+                vpn-ipv6 send 16 receive
+                label-ipv4 send 16 receive
+            exit
+            backup-path ipv4 ipv6 label-ipv4 label-ipv6
+            sr-policy-import
+            next-hop-resolution
+                shortcut-tunnel
+                    family ipv4
+                        resolution-filter
+                            sr-policy
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                exit
+                labeled-routes
+                    transport-tunnel
+                        family vpn
+                            resolution-filter
+                                ldp
+                                rsvp
+                                bgp
+                                sr-te
+                            exit
+                            resolution filter
+                        exit
+                        family label-ipv4
+                            resolution-filter
+                                ldp
+                                rsvp
+                            exit
+                            resolution filter
+                        exit
+                    exit
+                exit
+            exit
+            group "RR"
+                cluster 6.7.6.7
+                neighbor 10.10.10.1
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4
+                    type internal
+                    local-as 65000
+                    peer-as 65000
+                exit
+                neighbor 10.10.10.2
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4
+                    type internal
+                    local-as 65000
+                    peer-as 65000
+                exit
+                neighbor 10.10.10.3
+                    description "TO-INLINE-RR"
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4 bgp-ls
+                    type internal
+                    export "EXPORT-LU"
+                    local-as 65000
+                    peer-as 65000
+                exit
+                neighbor 10.10.10.4
+                    shutdown
+                    description "TO-INLINE-RR"
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4 bgp-ls
+                    type internal
+                    export "EXPORT-LU"
+                    local-as 65000
+                    peer-as 65000
+                exit
+                neighbor 10.10.10.7
+                    description "TO-PEER-RR"
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4
+                    type internal
+                    local-as 65000
+                    peer-as 65000
+                exit
+            exit
+            group "INTER-AS"
+                egress-engineering
+                    no shutdown
+                exit
+                neighbor 10.6.9.2
+                    description "INTER-AS"
+                    family ipv4 vpn-ipv4 vpn-ipv6 evpn label-ipv4
+                    local-address 10.6.9.1
+                    type external
+                    local-as 65000
+                    peer-as 55000
+                    egress-engineering
+                        no shutdown
+                    exit
+                exit
+            exit
+            no shutdown
+        exit
+    exit
+
+#--------------------------------------------------
+echo "Open-Flow Configuration"
+#--------------------------------------------------
+    open-flow
+        of-switch "OFS1" ofs-id 1
+            of-controller 192.168.100.41:6653
+            exit
+            flowtable 0
+            exit
+            logical-port-status rsvp-te
+            logical-port-status mpls-tp
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "Log all events for service vprn, log syslog tls-client-profile Configuration"
+#--------------------------------------------------
+    log
+    exit
+#--------------------------------------------------
+echo "System Time NTP Configuration"
+#--------------------------------------------------
+    system
+        time
+            ntp
+                server 139.178.91.129
+                server 145.40.97.121
+                server 147.75.102.177
+            exit
+        exit
+    exit
+
+exit all
+

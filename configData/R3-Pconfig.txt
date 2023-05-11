@@ -3,7 +3,7 @@
 # Built on Wed Dec 15 14:15:11 PST 2021 by builder in /builds/c/2110B/R2/panos/main/sros
 # Configuration format version 21.10 revision 0
 
-# Generated THU MAY 04 08:28:13 2023 UTC
+# Generated THU MAY 04 15:26:27 2023 UTC
 
 exit all
 configure
@@ -1609,4 +1609,77 @@ echo "BGP Configuration"
 
 #--------------------------------------------------
 echo "Open-Flow Configuration"
-#----------------------------------------
+#--------------------------------------------------
+    open-flow
+        of-switch "OFS1" ofs-id 1
+            of-controller 192.168.100.41:6653
+            exit
+            flowtable 0
+            exit
+            logical-port-status rsvp-te
+            logical-port-status mpls-tp
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "Log all events for service vprn, log syslog tls-client-profile Configuration"
+#--------------------------------------------------
+    log
+    exit
+#--------------------------------------------------
+echo "System Time NTP Configuration"
+#--------------------------------------------------
+    system
+        time
+            ntp
+                server 139.178.91.129
+                server 145.40.97.121
+                server 147.75.102.177
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "OAM Performance Monitoring Configuration"
+#--------------------------------------------------
+    oam-pm
+        bin-group 10 fd-bin-count 3 fdr-bin-count 2 ifdv-bin-count 2 create
+            description "'SDNPOC-BinGroup'"
+            bin-type fd
+                delay-event round-trip lowest-bin 0 threshold 200
+            exit
+            no shutdown
+        exit
+        session "cw_10.3.4.1" test-family ip session-type proactive create
+            bin-group 10
+            meas-interval 5-mins create
+                event-mon
+                    delay-events
+                    loss-events
+                    no shutdown
+                exit
+            exit
+            ip
+                dest-udp-port 64364
+                destination 10.3.4.2
+                router-instance "Base"
+                source 10.3.4.1
+                twamp-light test-id 10 create
+                    delay-template "STREAM"
+                    record-stats delay-and-loss
+                    no shutdown
+                exit
+            exit
+        exit
+        streaming
+            delay-template "STREAM" create
+                description "OAM-PM Stream"
+                fd-avg round-trip
+                sample-window 10
+                window-integrity 80
+                no shutdown
+            exit
+        exit
+    exit
+
+exit all
+
